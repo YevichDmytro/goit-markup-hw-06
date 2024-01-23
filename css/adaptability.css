@@ -1,0 +1,270 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  color: #434455;
+  background-color: #ffffff;
+  width: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding-left: 0;
+}
+
+img {
+  display: block;
+}
+
+.section {
+  padding: 96px 0;
+}
+
+.container {
+  width: 320px;
+  padding: 0 16px;
+  margin: 0 auto;
+}
+/* --------------------------------section-3-------------------------------- */
+/* ----------------------------------team----------------------------------- */
+.section-team {
+  background-color: #f4f4fd;
+}
+
+.subtitle-team {
+  color: #2e2f42;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1.12;
+  letter-spacing: 0.02em;
+  text-transform: capitalize;
+  text-align: center;
+  margin-bottom: 72px;
+}
+
+.team-list {
+  display: flex;
+  flex-direction: column;
+  gap: 72px;
+}
+
+.team-list-item {
+  margin: 0 auto;
+  background-color: #ffffff;
+  border-radius: 0px 0px 4px 4px;
+  box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08),
+    0px 1px 1px 0px rgba(46, 47, 66, 0.16),
+    0px 1px 6px 0px rgba(46, 47, 66, 0.08);
+}
+
+.container-team-box {
+  padding: 32px 0;
+}
+
+.team-item-subtitle,
+.team-item-text {
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+.team-item-subtitle {
+  color: #2e2f42;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+}
+
+.team-item-text {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+}
+
+.team-list-icons {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+}
+
+.team-icons-item {
+  width: 40px;
+  height: 40px;
+}
+
+.team-icon-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: #4d5ae5;
+  fill: #f4f4fd;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.team-list-item:hover .team-icon-link,
+.team-icon-link:active,
+.team-icon-link:focus {
+  background-color: #404bbf;
+}
+
+/* --------------------------------section-4-------------------------------- */
+/* --------------------------------portfolio-------------------------------- */
+.section {
+}
+
+.section-portfolio {
+}
+
+.container {
+}
+
+.container-portfolio {
+}
+
+.subtitle {
+}
+
+.subtitle-portfolio {
+  color: #2e2f42;
+  text-align: center;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1.12;
+  letter-spacing: 0.02em;
+  text-transform: capitalize;
+  margin-bottom: 72px;
+}
+
+.portfolio-list {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+  margin: 0 auto;
+}
+
+.portfolio-list-item {
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.portfolio-list-item:hover {
+  box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08),
+    0px 1px 1px 0px rgba(46, 47, 66, 0.16),
+    0px 1px 6px 0px rgba(46, 47, 66, 0.08);
+}
+
+.container-portfolio-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.card-overlay-text {
+  background-color: #4d5ae5;
+  color: #f4f4fd;
+  padding: 40px 32px;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  transform: translateY(100%);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.portfolio-list-item:hover .card-overlay-text {
+  transform: translateY(0);
+}
+
+.container-portfolio-box {
+  padding: 32px 16px;
+  border: 1px solid #e7e9fc;
+  border-top: none;
+  background-color: #ffffff;
+}
+
+.subtitle-item {
+}
+
+.portfolio-item-subtitle {
+  color: #2e2f42;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+  margin-bottom: 8px;
+}
+
+.subtitle-text {
+}
+
+.portfolio-item-text {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    width: 768px;
+  }
+
+  .team-list {
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 64px 24px;
+  }
+
+  .team-list-item {
+    margin: 0;
+  }
+
+  .portfolio-list {
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 72px 24px;
+  }
+
+  .portfolio-list-item {
+    width: calc((100% - 24px) / 2);
+  }
+}
+
+@media screen and (min-width: 1158px) {
+  .section {
+    padding: 120px 0;
+  }
+
+  .container {
+    width: 1158px;
+  }
+
+  .team-list {
+    flex-wrap: nowrap;
+    gap: 24px;
+  }
+
+  .portfolio-list {
+    gap: 48px 24px;
+  }
+
+  .portfolio-list-item {
+    width: calc((100% - 48px) / 3);
+  }
+}
