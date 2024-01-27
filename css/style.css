@@ -34,6 +34,7 @@ ul {
 img {
   display: block;
   max-width: 100%;
+  height: auto;
 }
 
 .section {
@@ -106,22 +107,18 @@ img {
 /* -------------mobile-menu------------- */
 .container-mobile-menu {
   position: absolute;
+  z-index: 2;
   inset: 0;
+  width: 100%;
+  height: 100%;
   background-color: #ffffff;
-  min-width: 100%;
-  padding: 24px 24px 40px 16px;
+  padding: 72px 0 40px 16px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  opacity: 0;
-  visibility: hidden;
-  pointer-events: none;
 }
 
-.close-btn {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.mobile-close-btn {
   cursor: pointer;
   padding: 0;
   border: 1px solid #e7e9fc;
@@ -129,12 +126,11 @@ img {
   background-color: transparent;
   width: 24px;
   height: 24px;
-  margin-bottom: 24px;
-  margin-left: auto;
-}
-
-.close-btn-icon {
   fill: #2e2f42;
+  position: absolute;
+  z-index: 3;
+  top: 24px;
+  right: 24px;
 }
 
 .mobile-address {
@@ -275,11 +271,15 @@ img {
 
 @media screen and (min-width: 768px) {
   .title {
-    font-weight: bold;
     font-size: 56px;
     line-height: 1.07;
-    letter-spacing: 0.02em;
     max-width: 496px;
+    margin-bottom: 36px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .title {
     margin-bottom: 48px;
   }
 }
