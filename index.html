@@ -52,15 +52,15 @@
             </li>
           </ul>
         </address>
-        <button type="button" class="burger-menu">
+        <button type="button" class="burger-menu" data-modal-open>
           <svg class="burger-icon" width="24" height="24">
             <use href="./images/icons.svg#icon-burger-menu"></use>
           </svg>
         </button>
       </div>
 
-      <div class="container-mobile-menu">
-        <button type="submit" class="mobile-close-btn">
+      <div class="container-mobile-menu is-hidden" data-modal>
+        <button type="submit" class="mobile-close-btn" data-modal-close>
           <svg class="mobile-close-btn-icon" width="8px" height="8px">
             <use href="./images/icons.svg#icon-close-btn"></use>
           </svg>
@@ -144,7 +144,7 @@
     </header>
 
     <main class="main">
-      <!-- section-1 - hero -->
+      <!--? section-1 - hero -->
       <section class="section section-title">
         <div class="container container-title">
           <h1 class="title">Effective Solutions for Your Business</h1>
@@ -152,8 +152,8 @@
         </div>
       </section>
 
-      <!-- section-2 - features -->
-      <section class="section section-features">
+      <!--? section-2 - features -->
+      <!-- <section class="section section-features">
         <div class="container container-features">
           <h2 class="subtitle subtitle-features visually-hidden">Features</h2>
           <ul class="features-list">
@@ -207,10 +207,10 @@
             </li>
           </ul>
         </div>
-      </section>
+      </section> -->
 
-      <!-- section-3 - team -->
-      <section class="section section-team">
+      <!--? section-3 - team -->
+      <!-- <section class="section section-team">
         <div class="container container-team">
           <h2 class="subtitle subtitle-team">Our Team</h2>
           <ul class="team-list">
@@ -458,10 +458,10 @@
             </li>
           </ul>
         </div>
-      </section>
+      </section> -->
 
-      <!-- section-4 portfolio -->
-      <section class="section section-portfolio">
+      <!--? section-4 portfolio -->
+      <!-- <section class="section section-portfolio">
         <div class="container container-portfolio">
           <h2 class="subtitle subtitle-portfolio">Our Portfolio</h2>
           <ul class="portfolio-list">
@@ -725,10 +725,10 @@
             </li>
           </ul>
         </div>
-      </section>
+      </section> -->
     </main>
 
-    <footer class="footer">
+    <!-- <footer class="footer">
       <div class="container container-footer">
         <div class="container-footer-logo">
           <a class="logo logo-bottom" href="./index.html"
@@ -811,75 +811,104 @@
           </form>
         </div>
       </div>
-    </footer>
+    </footer> -->
 
-    <!-- Modal -->
-    <!-- <div class="backdrop">
-    <div class="modal">
-      <button type="button" class="modal-button-close">
-        <svg class="modal-icon-close" width="8" height="8">
-          <use href="./images/icons.svg#icon-close-btn"></use>
-        </svg>
-      </button>
-      <p class="modal-title">Leave your contacts and we will call you back</p>
+    <!--? Modal -->
+    <div class="backdrop">
+      <div class="modal">
+        <button type="button" class="modal-button-close">
+          <svg class="modal-icon-close" width="8" height="8">
+            <use href="./images/icons.svg#icon-close-btn"></use>
+          </svg>
+        </button>
+        <p class="modal-title">Leave your contacts and we will call you back</p>
 
-      <form class="modal-form">
-
-        <div class="modal-form-wrap">
-          <label for="user-name" class="form-wrap-label">Name</label>
-          <div class="form-wrap-box">
-            <input type="text" class="form-wrap-input" id="user-name" name="user-name" autocomplete="on" required
-              autofocus>
-            <svg class="form-wrap-icon" width="18" height="24">
-              <use href="./images/icons.svg#icon-person"></use>
-            </svg>
-          </div>
-        </div>
-
-        <div class="modal-form-wrap">
-          <label for="user-phone" class="form-wrap-label">Phone</label>
-          <div class="form-wrap-box">
-            <input type="tel" class="form-wrap-input" id="user-phone" name="user-phone" autocomplete="on" required>
-            <svg class="form-wrap-icon" width="18" height="24">
-              <use href="./images/icons.svg#icon-phone"></use>
-            </svg>
-          </div>
-        </div>
-
-        <div class="modal-form-wrap">
-          <label for="user-email" class="form-wrap-label">Email</label>
-          <div class="form-wrap-box">
-            <input type="email" class="form-wrap-input" id="user-email" name="user-email" autocomplete="on" required>
-            <svg class="form-wrap-icon" width="18" height="24">
-              <use href="./images/icons.svg#icon-email"></use>
-            </svg>
-          </div>
-        </div>
-
-        <div class="modal-form-wrap textarea-wrap">
-          <label class="form-wrap-label" for="user-comment">Comment</label>
-          <textarea class="form-wrap-textarea" name="user-comment" id="user-comment"
-            placeholder="Text input"></textarea>
-        </div>
-
-        <div class="form-wrap-checkbox">
-          <input type="checkbox" class="form-input-checkbox visually-hidden" name="user-privacy" id="user-privacy"
-            value="true">
-          <label for="user-privacy" class="form-wrap-label label-checkbox">
-            <span class="label-checkbox-span">
-              <svg class="form-checkbox-icon " width="10" height="8">
-                <use href="./images/icons.svg#icon-accept"></use>
+        <form class="modal-form">
+          <div class="modal-form-wrap">
+            <label for="user-name" class="form-wrap-label">Name</label>
+            <div class="form-wrap-box">
+              <input
+                type="text"
+                class="form-wrap-input"
+                id="user-name"
+                name="user-name"
+                autocomplete="on"
+                required
+                autofocus
+              />
+              <svg class="form-wrap-icon" width="18" height="24">
+                <use href="./images/icons.svg#icon-person"></use>
               </svg>
-            </span>
-            I accept the terms and conditions of the
-            <a href="" class="label-checkbox-link">Privacy Policy</a>
-          </label>
-        </div>
+            </div>
+          </div>
 
-        <button type="submit" class="modal-form-button">Send</button>
-      </form>
+          <div class="modal-form-wrap">
+            <label for="user-phone" class="form-wrap-label">Phone</label>
+            <div class="form-wrap-box">
+              <input
+                type="tel"
+                class="form-wrap-input"
+                id="user-phone"
+                name="user-phone"
+                autocomplete="on"
+                required
+              />
+              <svg class="form-wrap-icon" width="18" height="24">
+                <use href="./images/icons.svg#icon-phone"></use>
+              </svg>
+            </div>
+          </div>
+
+          <div class="modal-form-wrap">
+            <label for="user-email" class="form-wrap-label">Email</label>
+            <div class="form-wrap-box">
+              <input
+                type="email"
+                class="form-wrap-input"
+                id="user-email"
+                name="user-email"
+                autocomplete="on"
+                required
+              />
+              <svg class="form-wrap-icon" width="18" height="24">
+                <use href="./images/icons.svg#icon-email"></use>
+              </svg>
+            </div>
+          </div>
+
+          <div class="modal-form-wrap textarea-wrap">
+            <label class="form-wrap-label" for="user-comment">Comment</label>
+            <textarea
+              class="form-wrap-textarea"
+              name="user-comment"
+              id="user-comment"
+              placeholder="Text input"
+            ></textarea>
+          </div>
+
+          <div class="form-wrap-checkbox">
+            <input
+              type="checkbox"
+              class="form-input-checkbox visually-hidden"
+              name="user-privacy"
+              id="user-privacy"
+              value="true"
+            />
+            <label for="user-privacy" class="form-wrap-label label-checkbox">
+              <span class="label-checkbox-span">
+                <svg class="form-checkbox-icon" width="10" height="8">
+                  <use href="./images/icons.svg#icon-accept"></use>
+                </svg>
+              </span>
+              I accept the terms and conditions of the
+              <a href="" class="label-checkbox-link">Privacy Policy</a>
+            </label>
+          </div>
+
+          <button type="submit" class="modal-form-button">Send</button>
+        </form>
+      </div>
     </div>
-  </div> -->
     <script src="./js/file.js"></script>
   </body>
 </html>

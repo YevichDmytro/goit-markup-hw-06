@@ -5,7 +5,7 @@
     modal: document.querySelector('[data-modal]'),
   };
 
-  refs.openModalBtn.forEach((element) => {
+  refs.openModalBtn.forEach(element => {
     element.addEventListener('click', toggleModal);
   });
   refs.closeModalBtn.addEventListener('click', toggleModal);
@@ -22,5 +22,22 @@
   function toggleModal() {
     refs.modal.classList.toggle('is-hidden');
     document.body.classList.toggle('no-scroll');
+  }
+  document
+    .querySelector('.title-button')
+    .addEventListener('click', toggleOrderServiceModal);
+  document
+    .querySelector('.modal-button-close')
+    .addEventListener('click', toggleOrderServiceModal);
+  document
+    .querySelector('.backdrop')
+    .addEventListener('click', removeOrderServiceModal);
+  function toggleOrderServiceModal() {
+    document.querySelector('.backdrop').classList.toggle('is-open');
+    document.body.classList.toggle('no-scroll');
+  }
+  function removeOrderServiceModal() {
+    document.querySelector('.backdrop').classList.remove('is-open');
+    document.body.classList.remove('no-scroll');
   }
 })();
