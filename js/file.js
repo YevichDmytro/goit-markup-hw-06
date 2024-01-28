@@ -10,8 +10,6 @@
   });
   refs.closeModalBtn.addEventListener('click', toggleModal);
 
-  //* Закривання по кліку на бекдроп
-
   refs.modal.addEventListener('click', removeModal);
   function removeModal(e) {
     if (e.target === e.currentTarget) {
@@ -36,8 +34,11 @@
     document.querySelector('.backdrop').classList.toggle('is-open');
     document.body.classList.toggle('no-scroll');
   }
-  function removeOrderServiceModal() {
-    document.querySelector('.backdrop').classList.remove('is-open');
-    document.body.classList.remove('no-scroll');
+  function removeOrderServiceModal(e) {
+    const element = document.querySelector('.backdrop');
+    if (e.target === element) {
+      element.classList.remove('is-open');
+      document.body.classList.remove('no-scroll');
+    }
   }
 })();

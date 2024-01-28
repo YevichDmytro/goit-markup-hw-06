@@ -1021,11 +1021,15 @@ img {
   z-index: 10;
 }
 
+.backdrop.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
 .modal {
   width: 288px;
   min-height: 623px;
-  /* width: 408px;
-  min-height: 584px; */
   position: absolute;
   top: 50%;
   left: 50%;
@@ -1033,10 +1037,17 @@ img {
   border-radius: 4px;
   background-color: #fcfcfc;
   padding: 72px 16px 24px;
-  /* padding: 72px 24px 24px 24px; */
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@media screen and (min-width: 768px) {
+  .modal {
+    width: 408px;
+    min-height: 584px;
+    padding: 72px 24px 24px;
+  }
 }
 
 .modal-button-close {
@@ -1151,7 +1162,6 @@ img {
 .textarea-wrap {
   margin-bottom: 16px;
 }
-
 .form-wrap-textarea {
   height: 120px;
   width: 100%;
@@ -1166,6 +1176,10 @@ img {
   line-height: 1.17;
   letter-spacing: 0.04em;
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.form-wrap-textarea::placeholder {
+  opacity: 0.5;
 }
 
 @media screen and (min-width: 1158px) {
@@ -1197,7 +1211,6 @@ img {
   top: 50%;
   left: 0;
   transform: translateY(-50%);
-  /* margin-right: 8px; */
   fill: transparent;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     border 250ms cubic-bezier(0.4, 0, 0.2, 1),
@@ -1211,10 +1224,14 @@ img {
 }
 
 .label-checkbox-link {
-  /* padding-left: 4px; */
   color: #4d5ae5;
   text-decoration-line: underline;
-  flex-grow: 1;
+}
+
+@media screen and (min-width: 768px) {
+  .label-checkbox-link {
+    padding-left: 4px;
+  }
 }
 
 @media screen and (min-width: 1158px) {
